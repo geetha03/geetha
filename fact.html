@@ -1,0 +1,23 @@
+<html>
+
+	<script>
+	function myFact(){
+	var i;
+	var fact=1;
+	var n=document.f1.name1.value;
+	alert(n);
+	for(i=1;i<=n;i++)
+	{
+		fact*=i;
+	}
+	document.getElementById("demo").innerHTML=fact;
+}
+	</script>
+<body>
+
+	<form name=f1>
+		<p id="demo"></p>
+Enter the value: <input type="text" name="name1">
+<input type=button value="Submit" onclick="myFact()";
+</body>
+</html>

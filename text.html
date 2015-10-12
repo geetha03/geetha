@@ -1,0 +1,42 @@
+<html>
+<body>
+<script>
+function myFunction()
+{
+	var count,f=-1;
+	var str=document.f1.text.value;
+	var a=str.split(" ").length;
+	document.write(a);
+	for(var i=0;i<=str.length;i++)
+	{	
+		for(var j=0;j<=str.length;j++)
+		{
+			if(str.charAt(i)==str.charAt(j))
+			count++;
+        }
+        for(var k=0;k<i;k++)
+{
+	if(str.charAt(i)==str.charAt(k))
+     f=1;
+} 
+if(f==-1) 
+  alert(count);
+count=0;
+f=-1;
+    }
+    alert(count);
+}
+</script>
+<form name=f1>
+<textarea rows=6 columns=50 name="text"></textarea>
+<input type=button value="analyse" onclick="myFunction()">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+

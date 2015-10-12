@@ -1,0 +1,162 @@
+<html>
+<head>
+	<style>
+	h2{
+		text-align:center;
+		color: blue;
+	}
+	body{
+		background-color: green;
+	}
+	</style>
+<h2>Student Form</h2> 
+<script>
+function myFunction()
+{
+var a = document.getElementById("name").value;
+document.getElementById("name1").innerHTML = a ;
+var b = document.getElementById("age").value;
+document.getElementById("age1").innerHTML = b ;
+var c = document.getElementById("address").value;
+document.getElementById("address1").innerHTML = c ;
+var gender ="";
+if(document.getElementsByName("male").checked==true)
+ {
+   gender="Male";
+document.getElementById("gender1").innerHTML = gender;
+
+}
+else {
+   gender="Female";
+  
+document.getElementById("gender1").innerHTML = gender;
+
+}
+var chk_arr =  document.getElementsByName("education[]");
+var chklength = chk_arr.length;             
+for(k=0;k< chklength;k++)
+{
+  if(chk_arr[k].checked)
+     {
+		document.getElementById("high1").innerHTML+=chk_arr[k].value;
+     }
+} 
+var d = document.getElementById("city").value;
+document.getElementById("city1").innerHTML = d ;
+}
+</script>
+</head>
+<body>
+<form> 
+<table align="center">
+<tr>	
+<td>Name:</td><td><input type="text" id="name" name="t1"></td>
+</tr>
+<tr>
+<td>Age:</td><td><input type="text" id="age" name="t2"></td>
+</tr>
+<tr>
+<td>Gender:</td><td><input type="radio" name="male">male</td>
+</tr>
+<tr>
+<td></td><td><input type="radio" name="female">female</td>
+</tr>
+<tr>
+	<td>Address:</td><td><input type="text" id="address" name="t5"></td>
+</tr>
+<tr>
+	<td>Education:</td><td><input type="checkbox" id="high" name="education[]" value="high school">High School</td>
+	</tr>
+	<tr>
+	<td></td><td><input type="checkbox" id="education1" name="education[]" value="Diploma">Diploma</td>
+	</tr><tr>
+	<td></td><td><input type="checkbox" id="education2" name="education[]" value="degree" >Degree/Graduation</td>
+	</tr><tr>
+	<td></td><td><input type="checkbox" id="education3" name="education[]" value="post">Post Graduation</td>
+	</tr><tr>
+	<td></td><td><input type="checkbox" id="education4" name="education[]" value="phd">PHD</td>
+	</tr>
+<tr>
+<td>City:</td>
+<td><select name="city" id="city">
+<option value="vizag">vizag</option>
+<option value="guntur">guntur</option>
+<option value="nellore">nellore</option>
+</select></td>
+</tr>
+</table>
+</form>
+<div align="center">
+<input type="reset" value="clear">
+<button type="button" value="Submit" 
+onclick="myFunction();" name="submit"> Submit
+	</button>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<form>
+<table>
+<tr>	
+<td>Name:</td><td id= "name1"></td>
+</tr>
+<tr>
+<td>Age:</td><td id="age1"></td>
+</tr>
+<tr>
+<td>Gender:</td><td id="gender1"></td>
+</tr>
+<tr>
+<td></td><td></td>
+</tr>
+<tr>
+	<td>Address:</td><td id="address1"></td>
+</tr>
+<tr>
+	<td>Education:</td><td id="high1"></td>
+</tr>
+	
+<tr>
+<td>City:</td><td id="city1"></td>
+</tr>
+</form>
+</table>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

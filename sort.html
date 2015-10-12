@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function mySort()
+{
+var a=document.form1.one.value;
+var b=document.form1.two.value;
+var c=document.form1.three.value;
+var d=document.form1.four.value;
+var e=document.form1.five.value;
+var f=document.form1.six.value;
+var g=document.form1.seven.value;
+var h=document.form1.eight.value;
+var i=document.form1.nine.value;
+var j=document.form1.ten.value;
+var array=[a,b,c,d,e,f,g,h,i,j];
+array.sort(function (a,b){return a-b});;
+document.getElementById("demo").innerHTML =array;
+}
+</script>
+</head>
+<body>
+<form name=form1>
+	<p id="demo"></p>
+	<input type="text" name="one" ></br>
+	<input type="text" name="two"></br>
+	<input type="text" name="three"></br>
+	<input type="text" name="four"></br>
+	<input type="text" name="five"></br>
+	<input type="text" name="six"></br>
+	<input type="text" name="seven"></br>
+	<input type="text" name="eight"></br>
+	<input type="text" name="nine"></br>
+	<input type="text" name="ten"></br>
+	<input type=button value="sort" onclick="mySort()">
+</form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
