@@ -1,0 +1,74 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<style>
+	h2{
+		text-align:center;
+		color: blue;
+	}
+	body{
+		background-color: green;
+	}
+	</style>
+<h2>Student Form</h2> 
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+var a = $("#name").val();
+//$("#name1") = a ;
+document.write(a);return false;
+var b = $("#age").val();
+//$("#age1") = b ;
+document.write(b);return false;
+//var c = $("#address").val();
+//$("#address1") = c ;
+//document.write(c);
+});
+	});
+
+</script>
+</head>
+<body>
+<form> 
+<table align="center">
+<tr>	
+<td>Name:</td><td><input type="text" id="name" name="t1"></td>
+</tr>
+<tr>
+<td>Age:</td><td><input type="text" id="age" name="t2"></td>
+</tr>
+<tr>
+	<td>Address:</td><td><input type="text" id="address" name="t5"></td>
+</tr>
+</table>
+</form>
+<div align="center">
+<input type="reset" value="clear">
+<button>Submit</button>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<html>
+<form>
+<table>
+<tr>	
+<td>Name:</td><td id="name1"></td>
+</tr>
+<tr>
+<td>Age:</td><td id="age1"></td>
+</tr>
+<tr>
+<td>Address:</td><td id="address1"></td>
+</tr>
+</form>
+</table>
+</html>

@@ -1,0 +1,170 @@
+<html>
+  <select id='countries' onchange='countryChanged(this.value);'>
+    <option value=''>Select Country</option>
+    <option value='India'>India</option>
+    <option value='America'>America</option>
+    <option value='Australia'>Australia</option>
+  </select>
+  &nbsp;&nbsp;
+  <select id='states' onchange='stateChanged(this.value);'>
+    <option value=''>Select State</option>
+  </select>
+  &nbsp;&nbsp; 
+  <select id='cities' onchange='cityChanged(this.value);'>
+    <option value=''>Select City</option>
+  </select>
+  
+ <script type="text/javascript">  
+   var statesIndia=["Andhra", "Kerala"];
+   var statesAmerica=["Texas", "Houseton"];
+   var statesAustralia=["Sydney", "Melbourne"];
+   
+   var citiesAndhra=["Vizag", "Guntur"];
+   var citiesKerala=["Banglore", "Mysore"];
+   
+   var citiesTexas=["Vijayawada", "Nellore"];
+   var citiesHouseton=["Mumbai", "Chennai"];
+  
+   var citiesSydney=["Delhi", "Kolkata"];
+   var citiesMelbourne=["Lucknow", "Hyderabad"];
+   
+   
+   function countryChanged(country)
+   {  
+      var selectState = document.getElementById('states');
+      var ln = selectState.length - 1;
+      while (ln > 0)
+      { 
+        selectState.remove(1);  //Remove all but "Select State"
+        ln--;
+      }
+      
+      var selectCity = document.getElementById('cities');
+      var ln = selectCity.length - 1;
+      while (ln > 0)
+      { 
+        selectCity.remove(1);  //Remove all but "Select City"
+        ln--;
+      }    
+      
+      var stateArray;
+      
+      switch(country)
+      {
+        case "India":
+            stateArray=statesIndia
+            break;
+        case "America":
+            stateArray=statesAmerica
+            break;
+        case "Australia":
+            stateArray=statesAustralia
+            break;
+        default:
+      }      
+          
+      for (i = 0; i < stateArray.length; i++)
+      {
+        var option = document.createElement('option'); 
+        option.text = stateArray[i];
+        option.value = stateArray[i];
+        selectState.add(option);
+      }      
+  }
+  
+  function stateChanged(state)
+  {  
+     var selectCity = document.getElementById('cities');
+     var ln = selectCity.length - 1;
+     while (ln > 0)
+     { 
+       selectCity.remove(1);  //Remove all but "Select City"
+       ln--;
+     }    
+     
+     var cityArray;
+     
+     switch(state)
+     {
+       case "Andhra":
+           cityArray=citiesAndhra
+           break;
+       case "Kerala":
+           cityArray=citiesKerala
+           break;
+       
+           
+       case "Texas":
+           cityArray=citiesTexas
+           break;
+       case "Houseton":
+           cityArray=citiesHouseton
+           break;
+       
+       case "Sydney":
+           cityArray=citiesSydney
+           break;
+       case "Melbourne":
+           cityArray=citiesMelbourne
+           break;
+       
+       default:
+     }   
+      
+     for (i = 0; i < cityArray.length; i++)
+     {
+       var option = document.createElement('option'); 
+       option.text = cityArray[i];
+       option.value = cityArray[i];
+       selectCity.add(option);
+     }      
+  }
+  
+ function cityChanged(city)
+  {  
+     switch(city)
+     {
+       case "Vizag":
+           alert("Vizag text") 
+           break;
+       case "Guntur":
+           alert("Guntur text") 
+           break;
+       case "Banglore":
+           alert("Banglore text") 
+           break;
+       case "Mysore":
+           alert("Mysore text") 
+           break;
+       
+       case "Vijayawada":
+           alert("Vijayawada text") 
+           break;
+       case "Nellore":
+           alert("Nellore text") 
+           break;
+       case "Mumbai":
+           alert("Mumbai text") 
+           break;  
+       case "Chennai":
+           alert("Chennai text") 
+           break;
+       
+       case "Delhi":
+           alert("Delhi text") 
+           break;
+       case "Kolkata":
+           alert("Kolkata text") 
+           break;            
+       case "Lucknow":
+           alert("Lucknow text") 
+           break;
+       case "Hyderabad":
+           alert("Hyderabad text") 
+           break;
+
+       default:
+     }   
+  } 
+  </script>
+</html>
