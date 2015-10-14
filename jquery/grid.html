@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+  
+	<table style="background:#fff;">
+<tr>
+	<td>Number</td>
+ <td>Name</td>
+ <td >Gender</td>
+  <td >Address</td>
+   <td><button><div style="color:black;cursor:pointer;" onclick="addMoreRows(this.form);"> Action/Add </div></button> </td>
+   </tr>
+   
+    <tr id="rowId">
+      <td><input name="name1"  id="name1" type="text" value="6"/></td>
+       <td><input name="name2" id="name2" type="text" value="Akmai" /></td>
+       <td><input name="name3" id="name3" type="text" value="Laki-laki" /></td> 
+        <td><input name="name4" id="name4" type="text" value="Calee" /></td> 
+        </table>
+          <div id="addedRows"></div> </td> 
+           </tr>
+          
+
+<script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+ <script type="text/javascript"> 
+ var rowCount = 1;
+  function addMoreRows(frm) { 
+  	rowCount ++; 
+    var a = $('#name1').val();
+    var b = $('#name2').val();
+    var c= $('#name3').val();
+    var d = $('#name4').val();
+   var recRow = '<p id="rowCount'+rowCount+'"><tr><td><input name="name1" type="text" maxlength="120" value="'+a+'" style="margin: 4px 5px 0 5px;"/></td><td><input name="name2" type="text" maxlength="120" value="'+b+'" style="margin: 4px 5px 0 5px;"/></td><td><input name="name3" type="text" maxlength="120" value="'+c+'" style="margin: 4px 10px 0 0px;"/></td><td><input name="name4" type="text" maxlength="120" value="'+d+'" style="margin: 4px 5px 0 5px;"/></td></tr><a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><button>Delete</button></a></p>'; 
+   $('#addedRows').append(recRow);
+    } 
+    function removeRow(removeNum) 
+    { 
+    	$('#rowCount'+removeNum).remove();
+    }
+     </script>
+</script>
+</body>
+</html>
